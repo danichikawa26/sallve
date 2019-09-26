@@ -10,7 +10,7 @@ class App extends React.Component {
   };
 
   onSearchSubmit = async (term) => {
-    const response = await axios.get('http://www.omdbapi.com/?apikey=4e697a41&', {
+    const response = await axios.get('https://www.omdbapi.com/?apikey=4e697a41&', {
       params: { s: term },
     });
     this.setState({ movies: response.data.Search });

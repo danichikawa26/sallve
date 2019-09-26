@@ -20,7 +20,7 @@ class MovieDetails extends React.Component {
    };
 
   componentDidMount() {
-    axios.get('http://www.omdbapi.com/?apikey=4e697a41&', {
+    axios.get('https://www.omdbapi.com/?apikey=4e697a41&', {
       params: { i: this.props.match.params.imdbID },
     }).then(response => {
       this.setState({ 
