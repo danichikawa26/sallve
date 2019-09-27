@@ -42,6 +42,10 @@ class MovieDetails extends React.Component {
   render() {
     return (
       <div className="ui container">
+        <div className="sallve-title-details">
+          <img src="https://cdn.shopify.com/s/files/1/0074/3486/2639/files/marca_sallve-2_a948a523-fda3-4a3c-a3f6-9faf1bc01317.gif" alt="logo"/>
+          <h1>movies</h1>
+        </div>
         <div className="upper-content">
           <div className="basic-info">
             <h1>{this.state.movieName}</h1>

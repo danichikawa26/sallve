@@ -3,6 +3,20 @@ body, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+.sallve-title-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.sallve-title-details h1 {
+  margin: 0 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
 .upper-content {
   display: flex;
   justify-content: space-between;
