@@ -2,7 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import './MovieDetails.css';
 import StarRatings from 'react-star-ratings';
-import { Link } from 'react-router-dom';
+import Logo from './common/Logo';
+import BackHomeButton from './common/BackButton'
 
 class MovieDetails extends React.Component {
   state = {
@@ -43,24 +44,14 @@ class MovieDetails extends React.Component {
     const poster = this.state.poster === "N/A" ? "https://dunlite.com.au/wp-content/uploads/2019/04/placeholder.jpg" : this.state.poster 
     return (
       <div className="ui container">
-        <div className="sallve-title-details">
-          <img src="https://cdn.shopify.com/s/files/1/0074/3486/2639/files/marca_sallve-2_a948a523-fda3-4a3c-a3f6-9faf1bc01317.gif" alt="logo"/>
-          <h1>movies</h1>
-        </div>
+        <Logo/>
         <div className="upper-content">
           <div className="basic-info">
             <h1>{this.state.movieName}</h1>
             <h3>{this.state.releaseDate} | {this.state.genres} </h3>
             <h4>Awards: {this.state.awards}</h4>
           </div>
-          <Link to="/" className="back-desk">
-            <div className="ui animated button" tabIndex="0">
-              <div className="visible content">Back</div>
-                <div className="hidden content">
-                  <i className="left arrow icon"></i>
-                </div>
-            </div>
-          </Link>
+          <BackHomeButton platform="desktop"/>
         </div>
         <div className="body-content">
           <img src={poster} alt="poster"/>
@@ -81,14 +72,7 @@ class MovieDetails extends React.Component {
                   );
                 })}
               </div>
-            <Link to="/" className="back-mobile">
-              <div className="ui animated button" tabIndex="0">
-                <div className="visible content">Back</div>
-                  <div className="hidden content">
-                    <i className="left arrow icon"></i>
-                  </div>
-              </div>
-            </Link>
+            <BackHomeButton platform="mobile"/>
           </div>
         </div>
       </div>

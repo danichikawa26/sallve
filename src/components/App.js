@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import SearchBar from './SearchBar';
 import MovieCard from './MovieCard';
+import Logo from './common/Logo';
 import './App.css';
 
 class App extends React.Component {
@@ -35,10 +36,7 @@ class App extends React.Component {
     return (
       <div className={"home " + (this.state.movies.length === 0 ? 'center' : '')}>
         <div className="search-display">
-          <div className="sallve-title">
-            <img src="https://cdn.shopify.com/s/files/1/0074/3486/2639/files/marca_sallve-2_a948a523-fda3-4a3c-a3f6-9faf1bc01317.gif" alt="logo"/>
-            <h1>movies</h1>
-          </div>
+          <Logo/>
           <SearchBar onSubmit={this.onSearchSubmit} />
         </div>
 
