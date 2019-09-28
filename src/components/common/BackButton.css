@@ -6,6 +6,10 @@
   display: none;
 }
 
+.ui.animated.button {
+  border-radius: 0;
+}
+
 @media (max-width: 600px) 
 {
 
