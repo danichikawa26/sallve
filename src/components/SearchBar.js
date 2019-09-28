@@ -16,8 +16,8 @@ class SearchBar extends React.Component {
         <div className="search-container">
           <div className="ui search">
             <div className="ui icon input">
-              <i className="search icon"></i>
-              <input type="text" className="prompt" placeholder="find a movie" value={this.state.term} 
+              <img src="https://cdn.shopify.com/s/files/1/0074/3486/2639/t/62/assets/lupa.svg?154259" alt="search-icon" className="search-icon"/>
+              <input type="text" className="prompt" placeholder="find a movie" value={this.state.term}
                       onChange={e => this.setState({ term: e.target.value })} />
             </div>
           </div>

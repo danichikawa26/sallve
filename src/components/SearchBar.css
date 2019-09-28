@@ -5,7 +5,7 @@ form, .search, .input, .prompt {
 .ui.search .prompt {
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid black;
 }
 
 .search-container {
@@ -13,9 +13,12 @@ form, .search, .input, .prompt {
 
 }
 
-.search.icon {
-  left: 0;
-  right: default;
+.search-icon {
+  position: absolute;
+  z-index: 1;
+  height: 75%;
+  max-width: auto;
+  top: 5px;
 }
 
 .prompt {
