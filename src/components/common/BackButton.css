@@ -1,0 +1,24 @@
+.back-desk {
+  display: block;
+}
+
+.back-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) 
+{
+
+  .back-desk
+  {
+    display: none;
+  }
+
+ .back-mobile
+  {
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+  }
+
+}

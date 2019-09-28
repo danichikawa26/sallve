@@ -1,0 +1,12 @@
+.sallve-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.sallve-title h1 {
+  margin: 0 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
