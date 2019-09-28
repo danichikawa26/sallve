@@ -67,7 +67,7 @@ class MovieDetails extends React.Component {
                     <div key={rating.Value} className="rating">
                       <p>{rating.Source}</p>
                       <StarRatings rating={parseInt(rating.Value.replace(/\D/,'').substring(0,2), 10)/20} starDimension='20px' 
-                                   starSpacing='1px' starRatedColor='#E4BB24' starEmptyColor='rgb(203, 211, 227)'/>
+                                   starSpacing='1px' starRatedColor='#9F77FF' starEmptyColor='rgb(203, 211, 227)'/>
                     </div>
                   );
                 })}

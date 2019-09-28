@@ -1,3 +1,52 @@
 form, .search, .input, .prompt {
   width: 100%;
 }
+
+.ui.search .prompt {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #999;
+}
+
+.search-container {
+  display: flex;
+
+}
+
+.search.icon {
+  left: 0;
+  right: default;
+}
+
+.prompt {
+  padding-left: 2.67142857em !important;
+  padding-right: 0 !important;
+}
+
+.ui.primary.button {
+  background-color: #FDAAFE;
+  color: black;
+  margin-left: 15px;
+  border-radius: 0;
+}
+
+.ui.primary.button:hover {
+  background-color: #FDAAFE;
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 600px) 
+{
+  .search-container 
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ui.primary.button {
+    margin-left: 3.5px;
+    margin-top: 20px;
+    max-width: 200px;
+  }
+}
