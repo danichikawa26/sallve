@@ -6,14 +6,25 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    movies: [], 
+    movies: [],
+    error: "" 
   };
 
+  isSearchTermAlphanumeric = (searchTerm) => {
+    return RegExp(/[\w]|_/g).test(searchTerm)
+  }
+
   onSearchSubmit = async (term) => {
+    if (!this.isSearchTermAlphanumeric(term)) {
+      this.setState({error: "tente usar só letras ou números na sua busca :)", movies: []})
+      return;
+    }
+
     const response = await axios.get('https://www.omdbapi.com/?apikey=4e697a41&', {
       params: { s: term },
     });
-    this.setState({ movies: response.data.Search });
+    if (response.data.Search) this.setState({ movies: response.data.Search, error: "" });
+    else this.setState({error: "não achamos seu filme :/", movies: []})
   }
 
   onClickHandler = (id) => {
@@ -30,6 +41,9 @@ class App extends React.Component {
           </div>
           <SearchBar onSubmit={this.onSearchSubmit} />
         </div>
+
+        <h1>{this.state.error}</h1>
+        
         <div className="ui stackable four column grid container">
           {this.state.movies.map(movie => {
             return (
