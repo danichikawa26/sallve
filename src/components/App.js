@@ -40,7 +40,7 @@ class App extends React.Component {
           <SearchBar onSubmit={this.onSearchSubmit} />
         </div>
 
-        <h1>{this.state.error}</h1>
+        <h3>{this.state.error}</h3>
         
         <div className="ui stackable four column grid container">
           {this.state.movies.map(movie => {
